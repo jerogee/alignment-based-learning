@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+BASIC INSTALLATION
+--------------------------------------------------------------------------------
+
+The simplest way to compile this package is:
+
+1. Being in the same location as this file, type:
+
+      ./configure
+
+   to configure the package for your system.
+
+2. To compile the package, type:
+
+      make
+
+3. To install the programs, the data files and documentation, type:
+
+      make install
+
+4. If desired, you can remove the program binaries and object files
+   from the source code directory by typing `make clean'.
+
+After installation, three commands have been made accessible:
+- abl_align    : alignment learning
+- abl_cluster  : clustering of alignment learning hypotheses
+- abl_select   : selection learning
+
+Look into the reference manual in the doc/ directory or in the info
+pages for instructions on how to use these commands.
+
+--------------------------------------------------------------------------------
+COMPILER OPTIONS
+--------------------------------------------------------------------------------
+
+Before running `make', you might want to take advantage of
+machine-specific characteristics in the compilation to increase
+program execution speed.  In order to do so, you should set GCCFLAGS
+to provide any compilation flags you need for your machine.
+
+E.g. for Pentium4 machines:
+
+   export GCCFLAGS="-march=pentium4 -mfpmath=sse -msse2 -mmmx"
+
+and for AMD Opterons:
+
+   export GCCFLAGS="-march=opteron"
+
+
+$Id: INSTALL 3755 2010-02-19 11:23:46Z menno $
